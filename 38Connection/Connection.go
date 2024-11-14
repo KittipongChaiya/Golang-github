@@ -15,7 +15,7 @@ type Book struct {
 }
 
 func main() {
-	// เชื่อมต่อกับ PostgreSQL
+
 	connStr := "host=localhost port=9999 user=postgres password=root1234 dbname=postgres sslmode=disable"
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
@@ -23,7 +23,6 @@ func main() {
 	}
 	defer db.Close()
 
-	// ทดสอบการเชื่อมต่อ
 	err = db.Ping()
 	if err != nil {
 		panic(err)
