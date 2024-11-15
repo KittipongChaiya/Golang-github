@@ -7,7 +7,7 @@ import (
 	"gorm.io/gorm"
 )
 
-// แก้ไขโครงสร้าง Book ให้ ID เป็น Auto Increment
+// โครงสร้าง Book ให้ ID เป็น Auto Increment
 type Book struct {
 	ID     int `gorm:"primaryKey;autoIncrement"` // เพิ่ม autoIncrement
 	Title  string
